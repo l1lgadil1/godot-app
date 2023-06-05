@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://csebml4fvh726"]
+[gd_scene load_steps=5 format=3 uid="uid://csebml4fvh726"]
 
 [ext_resource type="PackedScene" uid="uid://d0xmuk37rbfyw" path="res://scenes/player.tscn" id="1_wg70r"]
+[ext_resource type="PackedScene" uid="uid://duc1pdknyiv4g" path="res://scenes/box.tscn" id="2_rj0kr"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_jw7p1"]
 size = Vector2(1000, 100)
@@ -12,7 +13,7 @@ size = Vector2(376.017, 54.4643)
 position = Vector2(492, 545)
 
 [node name="Player" parent="." instance=ExtResource("1_wg70r")]
-position = Vector2(13, -179)
+position = Vector2(40, -38)
 rotation = -0.0122769
 jump_force = 700
 
@@ -45,3 +46,39 @@ mesh = SubResource("QuadMesh_jw7p1")
 position = Vector2(-209.736, 132.015)
 rotation = 0.00380408
 shape = SubResource("RectangleShape2D_kgdjl")
+
+[node name="Box" parent="." instance=ExtResource("2_rj0kr")]
+position = Vector2(-98, -167)
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(-102, -146)
+rotation = 0.00198867
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform3"]
+modulate = Color(0.937255, 0.870588, 0.74902, 1)
+position = Vector2(-210.632, 131.505)
+scale = Vector2(0.376737, 0.550099)
+mesh = SubResource("QuadMesh_jw7p1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+position = Vector2(-209.736, 132.015)
+rotation = 0.00380408
+shape = SubResource("RectangleShape2D_kgdjl")
+
+[node name="Platform4" type="StaticBody2D" parent="."]
+position = Vector2(-502, -298)
+rotation = 0.00198867
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform4"]
+modulate = Color(0.937255, 0.870588, 0.74902, 1)
+position = Vector2(-210.632, 131.505)
+scale = Vector2(0.376737, 0.550099)
+mesh = SubResource("QuadMesh_jw7p1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4"]
+position = Vector2(-209.736, 132.015)
+rotation = 0.00380408
+shape = SubResource("RectangleShape2D_kgdjl")
+
+[node name="Box2" parent="." instance=ExtResource("2_rj0kr")]
+position = Vector2(-396, -101)
