@@ -12,7 +12,7 @@ size = Vector2(376.017, 54.4643)
 position = Vector2(492, 545)
 
 [node name="Player" parent="." instance=ExtResource("1_wg70r")]
-position = Vector2(19, -136)
+position = Vector2(13, -179)
 rotation = -0.0122769
 jump_force = 700
 

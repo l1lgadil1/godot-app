@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://by6fgitlfl1h1" path="res://assets/textures/_Fall.png" id="5_2u0b3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pirpg"]
-size = Vector2(32, 69)
+size = Vector2(32, 56)
 
 [sub_resource type="Animation" id="Animation_dbbet"]
 resource_name = "idle"
@@ -38,7 +38,7 @@ tracks/1/keys = {
 }
 tracks/2/type = "value"
 tracks/2/imported = false
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/path = NodePath("Sprite2D:vframes")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
@@ -292,15 +292,14 @@ texture = ExtResource("2_dknfd")
 hframes = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(84, -33.5)
+position = Vector2(84, -27)
 shape = SubResource("RectangleShape2D_pirpg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(86, -58)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "fall"
+autoplay = "idle"
 libraries = {
 "": SubResource("AnimationLibrary_0v602")
 }
