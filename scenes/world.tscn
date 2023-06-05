@@ -6,53 +6,42 @@
 size = Vector2(1000, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kgdjl"]
-size = Vector2(998, 99.125)
+size = Vector2(376.017, 54.4643)
 
 [node name="World" type="Node2D"]
 position = Vector2(492, 545)
 
 [node name="Player" parent="." instance=ExtResource("1_wg70r")]
-position = Vector2(-2, -303)
+position = Vector2(13, -179)
+rotation = -0.0122769
 jump_force = 700
 
 [node name="Platform" type="StaticBody2D" parent="."]
-position = Vector2(-53, -106)
+position = Vector2(323, -140)
 rotation = 0.00198867
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Platform"]
 modulate = Color(0.937255, 0.870588, 0.74902, 1)
-position = Vector2(101, 154)
+position = Vector2(-210.632, 131.505)
+scale = Vector2(0.376737, 0.550099)
 mesh = SubResource("QuadMesh_jw7p1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
-position = Vector2(99.306, 153.803)
+position = Vector2(-209.736, 132.015)
 rotation = 0.00380408
 shape = SubResource("RectangleShape2D_kgdjl")
 
 [node name="Platform2" type="StaticBody2D" parent="."]
-position = Vector2(948, -234)
+position = Vector2(695, -201)
 rotation = 0.00198867
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Platform2"]
 modulate = Color(0.937255, 0.870588, 0.74902, 1)
-position = Vector2(101, 154)
+position = Vector2(-210.632, 131.505)
+scale = Vector2(0.376737, 0.550099)
 mesh = SubResource("QuadMesh_jw7p1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
-position = Vector2(99.306, 153.803)
-rotation = 0.00380408
-shape = SubResource("RectangleShape2D_kgdjl")
-
-[node name="Platform3" type="StaticBody2D" parent="."]
-position = Vector2(1938, -574)
-rotation = 0.00198867
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform3"]
-modulate = Color(0.937255, 0.870588, 0.74902, 1)
-position = Vector2(101, 154)
-mesh = SubResource("QuadMesh_jw7p1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
-position = Vector2(99.306, 153.803)
+position = Vector2(-209.736, 132.015)
 rotation = 0.00380408
 shape = SubResource("RectangleShape2D_kgdjl")
